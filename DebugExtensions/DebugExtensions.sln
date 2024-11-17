@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DebugExtensions", "DebugExtensions.csproj", "{0C135594-AABE-43DA-B8FB-3332690BB0C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tunelab.CommonDialog", "..\Tunelab.Avalonia.CommonDialog\Tunelab.CommonDialog.csproj", "{968B9621-6CB1-4455-B307-50A858C76ABC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Debug&Api", "Debug&Api", "{4110E04F-B939-49AC-A605-61559FA2B71A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuneLab.Base", "..\..\..\TuneLab.Base\TuneLab.Base.csproj", "{3969963B-0ECF-4FE1-8470-94ED4C45124A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuneLab.Extensions.Formats", "..\..\..\TuneLab.Extensions.Formats\TuneLab.Extensions.Formats.csproj", "{4227F4D7-E937-4886-A435-DAFF922501F0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuneLab.Extensions.Voices", "..\..\..\TuneLab.Extensions.Voices\TuneLab.Extensions.Voices.csproj", "{F51749F7-15D9-46DF-9FF5-EDABDF3219A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C135594-AABE-43DA-B8FB-3332690BB0C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C135594-AABE-43DA-B8FB-3332690BB0C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C135594-AABE-43DA-B8FB-3332690BB0C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C135594-AABE-43DA-B8FB-3332690BB0C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{968B9621-6CB1-4455-B307-50A858C76ABC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{968B9621-6CB1-4455-B307-50A858C76ABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{968B9621-6CB1-4455-B307-50A858C76ABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{968B9621-6CB1-4455-B307-50A858C76ABC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3969963B-0ECF-4FE1-8470-94ED4C45124A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3969963B-0ECF-4FE1-8470-94ED4C45124A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3969963B-0ECF-4FE1-8470-94ED4C45124A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3969963B-0ECF-4FE1-8470-94ED4C45124A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4227F4D7-E937-4886-A435-DAFF922501F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4227F4D7-E937-4886-A435-DAFF922501F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4227F4D7-E937-4886-A435-DAFF922501F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4227F4D7-E937-4886-A435-DAFF922501F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F51749F7-15D9-46DF-9FF5-EDABDF3219A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F51749F7-15D9-46DF-9FF5-EDABDF3219A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F51749F7-15D9-46DF-9FF5-EDABDF3219A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F51749F7-15D9-46DF-9FF5-EDABDF3219A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0C135594-AABE-43DA-B8FB-3332690BB0C4} = {4110E04F-B939-49AC-A605-61559FA2B71A}
+		{3969963B-0ECF-4FE1-8470-94ED4C45124A} = {4110E04F-B939-49AC-A605-61559FA2B71A}
+		{4227F4D7-E937-4886-A435-DAFF922501F0} = {4110E04F-B939-49AC-A605-61559FA2B71A}
+		{F51749F7-15D9-46DF-9FF5-EDABDF3219A1} = {4110E04F-B939-49AC-A605-61559FA2B71A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A6CCB74-3E7B-48E5-9664-41571417665B}
+	EndGlobalSection
+EndGlobal

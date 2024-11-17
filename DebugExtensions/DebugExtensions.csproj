@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <OutputPath>$(AppData)\TuneLab\Extensions\CommonDialog</OutputPath>
+	  <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+	  <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+	  <StartAction>Program</StartAction>
+	  <StartProgram>E:\UserDirectory\Downloads\TuneLab\TuneLab.exe</StartProgram>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\TuneLab.Base\TuneLab.Base.csproj" />
+    <ProjectReference Include="..\..\..\TuneLab.Extensions.Formats\TuneLab.Extensions.Formats.csproj" />
+    <ProjectReference Include="..\..\..\TuneLab.Extensions.Voices\TuneLab.Extensions.Voices.csproj" />
+    <ProjectReference Include="..\Tunelab.Avalonia.CommonDialog\Tunelab.CommonDialog.csproj" />
+  </ItemGroup>
+
+</Project>
