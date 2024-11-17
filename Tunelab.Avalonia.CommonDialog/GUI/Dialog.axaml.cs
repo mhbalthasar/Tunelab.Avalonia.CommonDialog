@@ -53,12 +53,16 @@ internal partial class Dialog : Window
     public void VisibleButtons(bool visible)
     {
         ButtonsPanel.IsVisible = visible;
-        if (!ButtonsPanel.IsVisible)
+        if (ButtonsPanel.IsVisible)
         {
+            if(ContentGrid.RowDefinitions[1].Height.Value==0)
+                Height += 56;
             ContentGrid.RowDefinitions[1].Height = new GridLength(56);
-        }else
+        }
+        else
         {
             ContentGrid.RowDefinitions[1].Height = new GridLength(0);
+            Height -= 56;
         }
     }
     public void SetTitle(string title)

@@ -71,7 +71,7 @@ internal partial class FreeDialog : Window
     public void VisibleButtons(bool visible)
     {
         ButtonsPanel.IsVisible = visible;
-        if (!ButtonsPanel.IsVisible)
+        if (ButtonsPanel.IsVisible)
         {
             ContentGrid.RowDefinitions[1].Height = new GridLength(56);
         }

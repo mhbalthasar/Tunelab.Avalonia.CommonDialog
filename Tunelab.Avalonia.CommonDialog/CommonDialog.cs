@@ -199,5 +199,45 @@ namespace TuneLab.CommonDialog
             dialog.AddButton("Cancel", FreeDialog.ButtonType.Primary);
             dialog.Show();
         }
+
+        public static void PanelBox(string title, string message, ButtonAction[] buttons,Func<bool> tiggerIsVisible, Func<string>? tiggerMessage = null)
+        {
+            var dialog = new Dialog();
+            dialog.SetTitle(title);
+            dialog.SetMessage(message);
+            var task = Task.Run(() => {
+                bool isVisible = true;
+                while (isVisible)
+                {
+                    isVisible = tiggerIsVisible();
+                    if (!isVisible)
+                    {
+                        Dispatcher.UIThread.Post(() =>
+                        {
+                            dialog.Close();
+                        });
+                    }
+                    else
+                    {
+                        string? newMsg = null;
+                        if (tiggerMessage != null)
+                        {
+                            newMsg = tiggerMessage();
+                        }
+                        Dispatcher.UIThread.Post(() =>
+                        {
+                            if (newMsg != null) dialog.SetMessage(newMsg);
+                        });
+                    }
+                    Task.Delay(100).Wait();
+                }
+            });
+            foreach (var ba in buttons)
+            {
+                dialog.AddButton(ba.Text, (Dialog.ButtonType)ba.Type).Clicked += ba.Action;
+            }
+            if (dialog.ButtonsPanel.Children.Count == 0) dialog.VisibleButtons(false);
+            dialog.Show();
+        }
     }
 }
