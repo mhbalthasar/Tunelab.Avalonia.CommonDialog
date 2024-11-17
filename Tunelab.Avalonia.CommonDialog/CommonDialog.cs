@@ -11,6 +11,38 @@ namespace TuneLab.CommonDialog
 {
     public class CommonDialog
     {
+        public enum UICallPriority
+        {
+            Default,
+            Normal,
+            Background,
+            Input,
+            Render,
+            Send
+        };
+        public static void UIThreadCall(Action action,UICallPriority priority=UICallPriority.Default)
+        {
+            DispatcherPriority pri=DispatcherPriority.Default;
+            switch (priority)
+            {
+                case UICallPriority.Normal:
+                    pri = DispatcherPriority.Normal;
+                    break;
+                case UICallPriority.Background:
+                    pri = DispatcherPriority.Background;
+                    break;
+                case UICallPriority.Input:
+                    pri = DispatcherPriority.Input;
+                    break;
+                case UICallPriority.Render:
+                    pri = DispatcherPriority.Render;
+                    break;
+                case UICallPriority.Send:
+                    pri = DispatcherPriority.Send;
+                    break;
+            }
+            Dispatcher.UIThread.Post(action, pri);
+        }
         public class ButtonAction
         {
             public enum ButtonType
@@ -65,7 +97,7 @@ namespace TuneLab.CommonDialog
             dialog.AddButton("Cancel", FreeDialog.ButtonType.Primary);
             dialog.Show();
         }
-        public static void Progress(string title, string message, ButtonAction[] buttons, Func<double> tiggerProcess, Func<string>? tiggerMessage = null)
+        public static void ProgressBox(string title, string message, ButtonAction[] buttons, Func<double> tiggerProcess, Func<string>? tiggerMessage = null)
         {
             var dialog = new FreeDialog();
             dialog.SetTitle(title);
